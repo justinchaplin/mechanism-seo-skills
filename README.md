@@ -12,7 +12,7 @@ New to this? Follow these four steps to go from zero to running your first skill
 
 | Requirement | Details |
 |-------------|---------|
-| Claude Pro account | Required to use skills. $20/month at [claude.ai](https://claude.ai). |
+| Claude Pro account (or higher) | Required to use skills. $20+/month at [claude.ai](https://claude.ai). |
 | Claude Code (CLI) | A free command-line tool. Connects Claude to your local skill files. |
 | Node.js (version 18+) | Required to run Claude Code. Free download at [nodejs.org](https://nodejs.org). |
 | Terminal | Mac: Terminal app (search with Cmd+Space). Windows: Command Prompt or PowerShell. |
