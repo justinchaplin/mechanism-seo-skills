@@ -12,7 +12,7 @@ New to this? Follow these four steps to go from zero to running your first skill
 
 | Requirement | Details |
 |-------------|---------|
-| Claude Pro account (or higher) | Required to use skills. $20+/month at [claude.ai](https://claude.ai). |
+| Claude Pro account | Required to use skills. $20/month at [claude.ai](https://claude.ai). |
 | Claude Code (CLI) | A free command-line tool. Connects Claude to your local skill files. |
 | Node.js (version 18+) | Required to run Claude Code. Free download at [nodejs.org](https://nodejs.org). |
 | Terminal | Mac: Terminal app (search with Cmd+Space). Windows: Command Prompt or PowerShell. |
@@ -138,11 +138,11 @@ cd ~/.claude/skills && git pull
 
 | Skill | What It Does |
 |-------|-------------|
-| [`non-branded-keyword-research`](./non-branded-keyword-research/SKILL.md) | Build a prioritized non-branded keyword list for a PortCo from scratch using Ahrefs + SERP analysis. Outputs a ranked target list with vehicle decisions. |
-| [`serp-analysis`](./serp-analysis/SKILL.md) | Analyze the live SERP for a keyword — classify intent, map page types, identify what's winning, surface content gaps and opportunity score. |
-| [`seo-entry-plan`](./seo-entry-plan/SKILL.md) | Takes keyword research output and produces a concrete, page-level execution brief. The "what to actually do" skill. |
-| [`content-strategy`](./content-strategy/SKILL.md) | Develop a full content strategy with topic clusters, content calendar, and E-E-A-T quality standards. |
-| [`page-optimizer`](./page-optimizer/SKILL.md) | Audit an existing page against a target keyword and the live SERP. Produces a competitor-informed, prioritized optimization plan with specific copy rewrites. |
+| [`non-branded-keyword-research`](./mechanism-seo-skills/non-branded-keyword-research/SKILL.md) | Build a prioritized non-branded keyword list for a PortCo from scratch using Ahrefs + SERP analysis. Outputs a ranked target list with vehicle decisions. |
+| [`serp-analysis`](./mechanism-seo-skills/serp-analysis/SKILL.md) | Analyze the live SERP for a keyword — classify intent, map page types, identify what's winning, surface content gaps and opportunity score. |
+| [`seo-entry-plan`](./mechanism-seo-skills/seo-entry-plan/SKILL.md) | Takes keyword research output and produces a concrete, page-level execution brief. The "what to actually do" skill. |
+| [`content-strategy`](./mechanism-seo-skills/content-strategy/SKILL.md) | Develop a full content strategy with topic clusters, content calendar, and E-E-A-T quality standards. |
+| [`page-optimizer`](./mechanism-seo-skills/page-optimizer/SKILL.md) | Audit an existing page against a target keyword and the live SERP. Produces a competitor-informed, prioritized optimization plan with specific copy rewrites. |
 
 ---
 
@@ -150,9 +150,9 @@ cd ~/.claude/skills && git pull
 
 | Skill | What It Does |
 |-------|-------------|
-| [`seo-competitor-link-gap`](./seo-competitor-link-gap/SKILL.md) | Pull Ahrefs Link Intersect data and produce a prioritized outreach target list. |
-| [`link-building-strategy`](./link-building-strategy/SKILL.md) | Determine the right link building tactic mix for a PortCo's stage and category. |
-| [`outreach-direction`](./outreach-direction/SKILL.md) | Build outreach messaging and angle recommendations for a specific link building campaign. |
+| [`seo-competitor-link-gap`](./mechanism-seo-skills/seo-competitor-link-gap/SKILL.md) | Pull Ahrefs Link Intersect data and produce a prioritized outreach target list. |
+| [`link-building-strategy`](./mechanism-seo-skills/link-building-strategy/SKILL.md) | Determine the right link building tactic mix for a PortCo's stage and category. |
+| [`outreach-direction`](./mechanism-seo-skills/outreach-direction/SKILL.md) | Build outreach messaging and angle recommendations for a specific link building campaign. |
 
 ---
 
@@ -160,9 +160,9 @@ cd ~/.claude/skills && git pull
 
 | Skill | What It Does |
 |-------|-------------|
-| [`site-health-audit`](./site-health-audit/SKILL.md) | Full technical audit covering crawlability, indexability, on-page signals, schema, images, and Core Web Vitals. Three modes: Full, Single Page, Targeted. |
-| [`branded-serp-audit`](./branded-serp-audit/SKILL.md) | Analyze how a PortCo brand appears on its own branded SERP. Includes ORM triage. |
-| [`aeo-geo-audit`](./aeo-geo-audit/SKILL.md) | Assess how a PortCo appears in AI-generated search answers — ChatGPT, Perplexity, Google AI Overview. |
+| [`site-health-audit`](./mechanism-seo-skills/site-health-audit/SKILL.md) | Full technical audit covering crawlability, indexability, on-page signals, schema, images, and Core Web Vitals. Three modes: Full, Single Page, Targeted. |
+| [`branded-serp-audit`](./mechanism-seo-skills/branded-serp-audit/SKILL.md) | Analyze how a PortCo brand appears on its own branded SERP. Includes ORM triage. |
+| [`aeo-geo-audit`](./mechanism-seo-skills/aeo-geo-audit/SKILL.md) | Assess how a PortCo appears in AI-generated search answers — ChatGPT, Perplexity, Google AI Overview. |
 
 ---
 
@@ -170,10 +170,10 @@ cd ~/.claude/skills && git pull
 
 | Skill | What It Does |
 |-------|-------------|
-| [`gsc-performance-monitoring`](./gsc-performance-monitoring/SKILL.md) | Weekly/monthly GSC review. What's gaining, what's losing, what needs action. |
-| [`performance-monitoring-dashboard`](./performance-monitoring-dashboard/SKILL.md) | Cross-platform performance snapshot across GA4, GSC, Shopify, and Ahrefs. |
-| [`competitive-monitoring`](./competitive-monitoring/SKILL.md) | Track competitor ranking movements, new content, and backlink activity over time. |
-| [`monthly-reporting`](./monthly-reporting/SKILL.md) | CEO-ready monthly update. Business impact framing, not vanity metrics. |
+| [`gsc-performance-monitoring`](./mechanism-seo-skills/gsc-performance-monitoring/SKILL.md) | Weekly/monthly GSC review. What's gaining, what's losing, what needs action. |
+| [`performance-monitoring-dashboard`](./mechanism-seo-skills/performance-monitoring-dashboard/SKILL.md) | Cross-platform performance snapshot across GA4, GSC, Shopify, and Ahrefs. |
+| [`competitive-monitoring`](./mechanism-seo-skills/competitive-monitoring/SKILL.md) | Track competitor ranking movements, new content, and backlink activity over time. |
+| [`monthly-reporting`](./mechanism-seo-skills/monthly-reporting/SKILL.md) | CEO-ready monthly update. Business impact framing, not vanity metrics. |
 
 ---
 
@@ -183,8 +183,8 @@ TPV (Third Party Validator) domains are a long-term authority play — a seconda
 
 | Skill | What It Does |
 |-------|-------------|
-| [`tpv-content-strategy`](./tpv-content-strategy/SKILL.md) | Develop a content and SEO strategy for a TPV property targeting a specific money keyword. |
-| [`tpv-comparison-pages`](./tpv-comparison-pages/SKILL.md) | Build comparison and roundup content for TPV properties. Covers CTR2 optimization and CTA placement. |
+| [`tpv-content-strategy`](./mechanism-seo-skills/tpv-content-strategy/SKILL.md) | Develop a content and SEO strategy for a TPV property targeting a specific money keyword. |
+| [`tpv-comparison-pages`](./mechanism-seo-skills/tpv-comparison-pages/SKILL.md) | Build comparison and roundup content for TPV properties. Covers CTR2 optimization and CTA placement. |
 
 ---
 
