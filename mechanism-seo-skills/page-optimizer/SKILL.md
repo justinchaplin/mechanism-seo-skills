@@ -43,19 +43,55 @@ Before auditing, identify the page type — this determines what "good" looks li
 
 ### Step 1 — Fetch the Target Page
 
-Use `web_fetch` on the target URL to extract:
+⚠️ **Critical:** Most modern ecommerce pages (Shopify, BigCommerce, Webflow, headless CMS) render significant content via JavaScript after page load. `web_fetch` performs a static HTTP GET and will miss this content entirely — including product descriptions, reviews, FAQ sections, ingredient cards, and benefit grids. A thin `web_fetch` result on a live PDP is almost always a JS-rendering limitation, not a content gap.
+
+**PREFERRED — Browser tools (when available):**
+
+Use browser automation to extract signals from the fully rendered DOM:
+
+```
+// All headings
+document.querySelectorAll('h1,h2,h3,h4').forEach(h => console.log(h.tagName, h.textContent.trim()))
+
+// All schema markup
+document.querySelectorAll('script[type="application/ld+json"]').forEach(s => console.log(s.textContent))
+
+// All image alt text
+document.querySelectorAll('img').forEach(i => console.log(i.alt || '[empty]', i.src))
+
+// Full page text
+document.body.innerText
+```
+
+Also use `get_page_text` for full rendered body content and `screenshot` for visual layout context.
+
+Extract:
 - Title tag (exact text)
 - Meta description (exact text)
 - H1 (exact text)
 - H2s and H3s (full heading structure)
 - First 150 words of body copy
 - Product description / main copy block (for PDPs)
+- All page sections and their content (value props, ingredients, how-to-use, FAQ, reviews, etc.)
 - Internal links present on page (anchor text + destination)
 - Schema markup present (product, review, FAQ, breadcrumb, etc.)
-- Image alt text for primary images
+- Image alt text for all images — flag if multiple images share identical alt text
 - Word/content length estimate
 
-If `web_fetch` is unavailable, ask the user to paste the page content or describe the page structure.
+**FALLBACK — `web_fetch` only when browser tools unavailable:**
+
+Use `web_fetch` on the target URL. Then immediately apply this sanity check:
+
+> **Completeness check:** Does the returned content seem reasonable for this page type?
+> - PDP with 0–1 H2s → likely incomplete fetch
+> - PDP with no FAQ, reviews, or benefit sections → likely incomplete fetch
+> - Any live page returning fewer than 200 words of body copy → almost certainly JS-rendered
+>
+> If the result looks thin: state explicitly — *"⚠️ web_fetch returned limited content. This page likely renders content via JavaScript. The content inventory below may be incomplete — verify key sections manually or with browser tools before acting on this audit."*
+>
+> **NEVER conclude a page has no content based solely on a thin web_fetch result.**
+
+If `web_fetch` is also unavailable, ask the user to paste the page content or describe the page structure.
 
 ---
 
@@ -73,7 +109,11 @@ If Ahrefs is unavailable, use web search to identify P1–3 results and note whi
 
 ### Step 3 — Fetch Competitor Pages
 
-Use `web_fetch` on the primary competitor URL (and up to 2 additional P1–3 URLs) to extract the same signals as Step 1:
+Apply the same browser-first approach from Step 1 to the primary competitor URL (and up to 2 additional P1–3 URLs).
+
+⚠️ **Same JS-rendering caveat applies.** Competitor Shopify/BigCommerce/Webflow pages have the same problem. If you compare a thin `web_fetch` result from the PortCo page against a thin `web_fetch` result from a competitor, you may be comparing two incomplete views — making the gap analysis unreliable. Use browser tools for competitor pages too when available.
+
+Extract the same signals as Step 1:
 - Title tag, H1, heading structure
 - Copy length and depth
 - Schema markup
