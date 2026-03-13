@@ -135,38 +135,60 @@ Not everything a competitor does requires a response. Prioritize:
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**Competitive Monitoring — [Brand Name]**
+*Period: [Month/date range]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**Competitive Landscape Summary:**
+[2–3 sentences. Who's moving? What's the dominant story this period? Is the PortCo gaining or losing ground relative to competitors?]
+
+**Competitor Snapshots:**
+
+| Competitor | Organic Traffic | Traffic Change | DR | Keyword Count | Notable Activity |
+|------------|----------------|----------------|----|---------------|-----------------|
+| [name] | [X] | [+/-X%] | [X] | [X] | [1 sentence] |
+| ... | | | | | |
+
+**Money Keyword Rankings:**
+
+| Keyword | PortCo Position | [Competitor 1] | [Competitor 2] | Change This Period |
+|---------|----------------|----------------|----------------|-------------------|
+| [keyword] | P[X] | P[X] | P[X] | [who moved where] |
+| ... | | | | |
+
+**Competitor Content Worth Noting:**
+[List new competitor content that's relevant — what it covers, what keyword it targets, how much traction it's getting. Skip anything irrelevant.]
+
+**New Referring Domains to Benchmark Competitors:**
+[List sites that linked to a competitor but not to the PortCo — with DR, relevance, and whether it has SERPdom value. These are outreach targets.]
+
+**Recommended Actions:**
+1. [Specific, immediate action — who does it, what is it]
+2. [Specific action]
+3. [Watch item for next cycle, if relevant]
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+## Judgment Guidelines
+
+- **Most competitor activity doesn't require an immediate response.** The goal is to catch the signals that matter — a competitor breaking into the top 5 on a money keyword, or landing a link from a site that ranks for our keywords. Not every ranking fluctuation is signal.
+- **New referring domains to competitors are the highest-value output of this skill.** Every site that linked to a competitor and not to us is a warm outreach target — they've already demonstrated interest in the category.
+- **Traffic growth without keyword growth usually means branded.** If a competitor's traffic is up but keyword count is flat, they may be running a brand campaign, not winning in organic. Don't overreact.
+- **Content gaps should feed directly into the content strategy.** If a competitor published something you haven't, note it — but run it through the Content Strategy skill before deciding to respond.
+- **Always frame actions for the team, not the PortCo.** The competitive monitoring report is internal — it's the basis for your work plan, not something you send to the PortCo.
+- **Month-over-month is noisy. Track direction over 3+ months.** A single good or bad month isn't a trend. Flag the direction but be measured about urgency unless the signal is strong.
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+## Example Trigger Phrases
 
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+- "Run competitive monitoring for PrimePutt"
+- "What are Hey Sunday's competitors doing in search?"
+- "Has [competitor] been building links recently?"
+- "Are we losing ground to [competitor] on [keyword]?"
+- "What new content have our competitors published this month?"
+- "Who's been linking to [competitor] that isn't linking to us?"
+- "Track competitor activity for [brand] for [month]"

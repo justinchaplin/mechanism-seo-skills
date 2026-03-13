@@ -138,38 +138,84 @@ With all data pulled, synthesize into three buckets:
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**Organic Performance Review — [Brand Name]**
+*Period: [current period] vs. [comparison period]*
+*Data sources: [list which platforms were used]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**Executive Summary:**
+[3–4 sentences. Is organic growing the business? What's the headline? Written for a CEO, not an SEO.]*
+
+**Visibility:**
+| Metric | This Period | Prior Period | Change |
+|--------|------------|--------------|--------|
+| Domain Rating | ... | ... | ↑/↓ |
+| Referring Domains | ... | ... | ↑/↓ |
+| GSC Impressions (non-branded) | ... | ... | ↑/↓ % |
+| GSC Impressions (branded) | ... | ... | ↑/↓ % |
+
+**Traffic:**
+| Metric | This Period | Prior Period | Change |
+|--------|------------|--------------|--------|
+| GSC Clicks (non-branded) | ... | ... | ↑/↓ % |
+| GSC Clicks (branded) | ... | ... | ↑/↓ % |
+| Organic Sessions (GA4/Shopify) | ... | ... | ↑/↓ % |
+| Avg Position — Money Keywords | ... | ... | ↑/↓ |
+
+**Business Impact:**
+| Metric | This Period | Prior Period | Change |
+|--------|------------|--------------|--------|
+| Organic Conversions | ... | ... | ↑/↓ % |
+| Organic Revenue | ... | ... | ↑/↓ % |
+| Organic CVR | ... | ... | ↑/↓ |
+
+**Money Keyword Rankings:**
+| Keyword | Position | Change | Notes |
+|---------|----------|--------|-------|
+| ... | ... | ↑/↓ | ... |
+
+**Link Building This Period:**
+- New referring domains: [#]
+- Notable placements: [list any high-value wins]
+- Active campaigns: [summary]
+
+**Halo Effect Note:**
+[1–2 sentences acknowledging organic's contribution to non-organic conversions — paid, direct, referral. Include if branded search is growing.]
+
+**What's Working:**
+- [bullet]
+- [bullet]
+
+**What Needs Attention:**
+- [bullet]
+- [bullet]
+
+**Actions for Next Month:**
+1. [specific action]
+2. [specific action]
+3. [specific action]
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+## Judgment Guidelines
+
+- **Lead with business impact, not rankings.** The executive summary should answer "is organic growing the business" — not "our average position improved by 0.3." Rankings are context, not the headline.
+- **Always acknowledge the halo effect.** Every monthly review should include a sentence about organic's contribution to non-organic conversions. This protects the engagement when attribution looks thin.
+- **Branded search growth = halo effect evidence.** If branded clicks in GSC are growing and there's no paid brand campaign driving it, organic and link building work is building awareness. Name this explicitly.
+- **Platform discrepancies are worth flagging, not hiding.** If GA4 and Shopify show different organic numbers, note it and use the more conservative number unless there's a clear reason not to.
+- **Three actions max.** The output should always end with 3 specific, actionable items — not a wishlist. What will actually move the needle next month?
+- **Context matters more than absolute numbers.** A 10% traffic drop after a Google algorithm update is different from a 10% drop with no external cause. Always include context.
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+## Example Trigger Phrases
 
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+- "Give me an organic performance update for Hey Sunday for February"
+- "How is PrimePutt performing organically this month?"
+- "Run the monthly review for Learner"
+- "Pull together organic performance for Hello Pest — first 30 days"
+- "How is organic performing vs. last year for [brand]?"
+- "What's the organic story for [brand] this quarter?"

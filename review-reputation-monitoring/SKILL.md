@@ -152,38 +152,95 @@ A 2-minute check to assess whether the brand is actively managing its reputation
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**Online Reputation Snapshot — [Brand Name]**
+*Audited: [date] | Launch stage: [Early / Growth / Mature]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**Overall Assessment:** [🟢 Healthy / 🟡 Watch / 🔴 Act Now]
 
----
-
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+[3–4 sentences that directly answer: "What is this company's general online reputation?" — written for a CEO, not an SEO report. Lead with the overall picture, then name the single biggest risk and single biggest opportunity.]
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+**Review Profile**
+
+| Surface | Rating | Count | Monthly Velocity | Status |
+|---------|--------|-------|-----------------|--------|
+| Brand site (flagship product) | X.X/5 | XXX | ~XX/mo | 🟢/🟡/🔴 |
+| Brand site (secondary product) | X.X/5 | XXX | ~XX/mo | 🟢/🟡/🔴 |
+| Trustpilot | X.X/5 | XXX | ~XX/mo | 🟢/🟡/🔴 |
+| Google | X.X/5 | XXX | — | 🟢/🟡/🔴 |
+
+**What buyers are saying (positive):** [Top 2–3 themes from recent reviews]
+**What buyers are saying (negative):** [Top 2–3 themes — or "No significant negative patterns observed" if clean]
+**Brand response rate:** [Active / Sporadic / None observed]
 
 ---
 
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
+**Reddit & UGC**
 
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+[If no Reddit presence: "No Reddit threads found mentioning [brand]. Normal for early-stage brands — worth monitoring monthly as brand awareness grows."]
+
+[If Reddit threads exist:]
+| Thread | Sentiment | Engagement | Ranks in Google? |
+|--------|-----------|------------|-----------------|
+| [title] | ✅/⚠️/🔴 | XX comments | Yes / No |
+
+---
+
+**AI Reputation**
+
+| Platform | Framing | Incidents Surfaced? |
+|----------|---------|-------------------|
+| ChatGPT | Positive / Neutral / Cautious / Negative | Yes / No |
+| Perplexity | Positive / Neutral / Cautious / Negative | Yes / No |
+| Gemini | Positive / Neutral / Cautious / Negative | Yes / No |
+
+[1–2 sentences: is AI reputation aligned with actual review sentiment, or diverging?]
+
+---
+
+**🔴 Act Now**
+[Specific risks actively hurting conversion or search — be direct about what's happening and why it matters]
+
+**🟡 Address This Month**
+[Gaps that aren't urgent but will compound — platform coverage, response rate, velocity lag]
+
+**🟢 Looking Good**
+[What's working — worth noting for CEO context and stakeholder updates]
+
+---
+
+**Recommended Actions**
+1. [Specific action — what, who, timeline]
+2. [Specific action]
+3. [Monitor — re-run cadence]
+
+---
+
+## Judgment Guidelines
+
+- **Read launch stage before reading the numbers.** A brand with 47 reviews at 4.6 stars that's been live 3 months is in great shape. The same numbers at 24 months is a problem. Never evaluate reputation in isolation from brand age.
+- **Early-stage seeding is a known strategy.** If it's in play, don't flag it as a risk internally. Assess whether early reviews read naturally and whether the transition to fully organic reviews is on track.
+- **Trustpilot is a black box.** The algorithm and weighting aren't fully transparent. Don't promise specific outcomes from Trustpilot work. The right recommendation is always: set up the free business account, enable post-purchase invitations, let it build organically.
+- **Reddit is the highest-leverage reputation risk.** A single high-engagement negative thread ranking in Google for "[brand] reviews" is worth escalating above almost everything else in this audit.
+- **AI reputation and Google reputation can diverge.** Check both — they require different remediation approaches.
+- **The CEO output should be readable in 90 seconds.** The overall assessment paragraph is the most important part. Write it like a trusted advisor giving a frank brief, not like an SEO report.
+- **Tie reputation to the halo effect in stakeholder framing.** Weak reviews mean organic traffic converts less efficiently — every point of SEO growth is worth less if the reputation layer is leaking conversion. Frame it this way when reporting to justify reputation work.
+- **Post-incident, run this skill before any content or link building work.** No point driving traffic to a brand in the middle of a reputation crisis. The conversation shifts from growth to protection first.
+
+---
+
+## Example Trigger Phrases
+
+- "Run a reputation check for Live It Up"
+- "What are customers saying about Hey Sunday?"
+- "Check if there's negative sentiment on Reddit about PrimePutt"
+- "Is the salmonella situation showing up in customer reviews?"
+- "We need a reputation baseline before we start content"
+- "How are our reviews looking — anything to flag for the CEO?"
+- "What does our review profile look like for Hello Pest?"
+- "Run ORM audit on [brand]"

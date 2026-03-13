@@ -87,38 +87,52 @@ For each link gap domain identified, add context:
 
 ---
 
-## Output
+## Output Format
 
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+Deliver a prioritized target list in this structure:
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**SEO Competitor & Link Gap Analysis — [Brand Name]**
+*Analyzed: [date]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**Money Keywords Analyzed:** [list]
+
+**Top SEO Competitors Identified:**
+| Domain | Type | Why Relevant |
+|--------|------|--------------|
+| ... | Direct / Indirect / Editorial | ... |
+
+**SERP Pattern Notes:**
+[2–3 sentences on what the SERPs look like — who dominates, what content types rank, what this means for link strategy]
+
+**Prioritized Link Gap Targets:**
+| Domain | DR | Link Type | Outreach Angle |
+|--------|----|-----------|----------------|
+| ... | ... | ... | ... |
+
+**Strategic Notes:**
+[2–3 sentences on overall link building approach given what was found — e.g., "This category is dominated by editorial roundups, so outreach should focus on inclusion in 'best of' content rather than resource page links."]
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+## Judgment Guidelines
+
+Apply these principles when interpreting results — they encode how Mechanism approaches link building:
+
+- **Editorial and review sites are high-value targets** in ecommerce categories. They already link to products; getting included is realistic.
+- **DR matters but relevance matters more.** A DR 35 niche blog in the exact category beats a DR 70 general lifestyle site.
+- **Prioritize domains linking to 2+ competitors.** They have an established pattern of linking to brands in this space. Easiest pitch.
+- **Flag if the category is SERP-crowded.** If major retailers and media dominate every keyword, note this — it shapes realistic expectations for what organic can achieve on the brand's own domain vs. a TPV strategy.
+- **New domains need foundational links first.** If the brand domain is new (DR < 10), note that the first priority is establishing basic domain credibility (citations, directories, early topical links) before pursuing competitive gap targets.
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+## Example Trigger Phrases
 
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+This skill should run when someone says things like:
+- "Kick off SEO research for Hello Pest"
+- "Find our link building targets for [brand]"
+- "Who are the SEO competitors for [brand]?"
+- "Run a link gap analysis for [domain]"
+- "We're launching [brand] — what does the link landscape look like?"

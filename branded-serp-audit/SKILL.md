@@ -156,38 +156,87 @@ Cross-reference with GSC branded search data if available — GSC is more accura
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**Branded SERP Audit — [Brand Name]**
+*Audited: [date]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
-
----
-
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+**Overall Assessment:** [🟢 Healthy / 🟡 Some issues / 🔴 Needs attention]
+[2–3 sentences on the overall branded SERP picture]
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+**Core Branded SERP — "[brand name]"**
+
+| Position | Domain | Content Type | Sentiment | Notes |
+|----------|--------|-------------|-----------|-------|
+| P1 | heysunday.com | Homepage | — | ✅ Brand owns |
+| P2 | instagram.com/heysunday | Social profile | — | ✅ |
+| P3 | [domain] | [type] | [+/neutral/-] | [note] |
+| ... | | | | |
+
+SERP features present: [Knowledge panel / People Also Ask / Review stars / Shopping / Image pack]
+Ads: [Brand running own ad? / Competitor running ads?]
 
 ---
 
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
+**Reviews SERP — "[brand name] reviews"**
 
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+| Position | Domain | Rating/Sentiment | Risk/Opportunity |
+|----------|--------|-----------------|-----------------|
+| P1 | [domain] | [positive/negative/mixed] | [note] |
+| ... | | | |
+
+---
+
+**Comparison SERP — "[brand name] vs [competitor]"**
+[Who owns it, ad activity, content sentiment — 3–4 sentences]
+
+**Discount/Coupon SERP — "[brand name] discount"**
+[Which affiliates rank, whether brand has own presence — 2–3 sentences]
+
+**Skeptic SERP — "is [brand name] legit/worth it"**
+[What skeptical buyers find, Reddit sentiment, key risks — 2–3 sentences]
+
+---
+
+**🔴 Risks — Act Now**
+[Any negative content, competitor encroachment, or significant brand reputation issues]
+
+**🟡 Opportunities — Address Soon**
+[Missing knowledge panel info, unowned comparison queries, positive reviews to amplify]
+
+**🔵 Monitor**
+[Items to track over time but not urgent]
+
+---
+
+**Recommended Actions**
+1. [Specific action — owner, deadline]
+2. [Specific action]
+3. [Monitor item]
+
+---
+
+## Judgment Guidelines
+
+- **P1 for the core branded term is non-negotiable.** If the brand's own site isn't ranking P1 for its own name, escalate immediately — something is technically wrong.
+- **Reddit is the highest-risk third-party surface.** Reddit threads rank well for branded queries and are high-trust for skeptical buyers. A negative Reddit thread in the top 5 for "[brand] reviews" is a meaningful conversion risk.
+- **Competitor ads on branded terms are common and not always worth fighting.** Note them, but don't escalate unless they're dominant or the brand has no own ad running.
+- **Knowledge panels are earned, not controlled directly.** If one is missing for a brand that's been live 12+ months with press coverage, it suggests insufficient brand entity signals. Flag for entity building work (Wikipedia, Wikidata, press mentions, structured data on site).
+- **Branded SERP health correlates with halo effect strength.** A brand with a clean, positive branded SERP converts more of the traffic that organic and TPV work drives to it. This is worth including in the halo effect framing when reporting.
+- **The TPV can appear in branded SERPs and that's fine.** If thelaundryguru.net appears in the P3–P8 range for "Hey Sunday," that's additional real estate for a trusted voice. Don't flag it as a problem.
+
+---
+
+## Example Trigger Phrases
+
+- "Audit the branded SERP for Hey Sunday"
+- "What shows up when you Google PrimePutt?"
+- "Do we own our branded search for Hello Pest?"
+- "Something negative is showing up when you search [brand name]"
+- "Check if [competitor] is running ads on our brand terms"
+- "What does a new customer find when they Google [brand]?"
+- "Run a branded SERP check for [brand] before we launch"

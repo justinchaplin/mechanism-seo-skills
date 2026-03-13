@@ -186,38 +186,71 @@ Internal linking on a TPV has two jobs:
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**TPV Content & SEO Strategy — [TPV Domain] for [PortCo]**
+*Analyzed: [date]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**Phase Assessment:**
+[Which phase is the TPV currently in? Is Phase 2 investment recommended? Why or why not? One paragraph.]
+
+**CTR2 Baseline:**
+[Current per-page CTR2 for the verifier page. What does this tell us about conversion health before we build traffic to it?]
+
+**Keyword Landscape:**
+
+| Ring | Keyword | Monthly Volume | KD | CTR2 Fit | Priority |
+|------|---------|---------------|-----|----------|----------|
+| Core | [keyword] | [X] | [X] | High | P1 |
+| Ring 2 | [keyword] | [X] | [X] | High | P1 |
+| Ring 2 | [keyword] | [X] | [X] | Medium | P2 |
+| Ring 3 | [keyword] | [X] | [X] | High | P2 |
+| ... | | | | | |
+
+**SERPdom Gap:**
+[Where does the PortCo core domain currently rank for the top money keyword? What would it take for the TPV to rank alongside it? What's the gap in DR/authority between the TPV and top-ranking editorial sites?]
+
+**Content Roadmap:**
+
+*Phase 2A (Foundation):*
+- [Page title / target keyword / CTR2 rationale]
+- [Page title / target keyword / CTR2 rationale]
+
+*Phase 2B (Authority):*
+- [Page title / target keyword / CTR2 rationale]
+- ...
+
+*Phase 2C (Amplification):*
+- [Linkable asset concept]
+- [Refresh candidates based on CTR2 data]
+
+**Internal Link Architecture:**
+[Diagram or description of how pages link together — which pages anchor to the core, how the PortCo is embedded]
+
+**What to Watch:**
+[2–3 signals that will tell you Phase 2 is working: e.g., "TPV domain DR crosses 35", "verifier page breaks into top 5 for [money keyword]", "CTR2 on [page] improves after [change]"]
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+## Judgment Guidelines
+
+- **Core domain always comes first.** If there's a resource tradeoff between investing in the PortCo's own SEO and the TPV, the core domain wins. TPV SEO is an expansion layer, not a substitute.
+- **CTR2 is the filter for every content decision.** A page that ranks but doesn't feature the PortCo prominently is a waste of investment. Always ask: will this page send people to the PortCo?
+- **Editorial credibility is non-negotiable.** Any content that reads promotional — either in tone or in how rankings are engineered — undermines the mechanism that makes the TPV work. Push back on anyone who wants to make the content more favorable to the PortCo at the expense of credibility.
+- **Phase 2 is not automatic.** The decision to invest in TPV SEO is a resource allocation decision. Document the case before committing — and document why you're deferring if you are.
+- **The SERPdom north star is aspirational.** PortCo P1 + TPV P2 for the same keyword is the ideal. In practice, both might be in the top 10. That's still SERPdom — and still valuable. Don't wait for P2 to declare the strategy working.
+- **CTR2 data is per-page.** If one page on the TPV has high traffic but low CTR2, that's a conversion problem — not a traffic problem. Diagnose separately from pages that have low traffic but strong CTR2.
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+## Example Trigger Phrases
 
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+- "Should we invest in SEO for thelaundryguru?"
+- "What content should we build on tourgrade.golf?"
+- "How do we grow [TPV domain] organically?"
+- "Can the TPV rank for [keyword]?"
+- "What's the content roadmap for [TPV domain]?"
+- "How do we get the TPV to rank alongside [PortCo] for [money keyword]?"
+- "TPV CTR2 is low — should we build more content or fix the page?"

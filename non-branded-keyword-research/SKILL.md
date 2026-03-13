@@ -165,38 +165,58 @@ Note: In an ideal world, money keywords always go to the core domain. TPV is a t
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**Non-Branded Keyword Strategy — [Brand Name]**
+*Analyzed: [date]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**Category Summary:**
+[2–3 sentences on what the SERP landscape looks like for this category — who dominates, what content types rank, overall difficulty assessment]
+
+**Benchmark Competitors Used:**
+| Domain | DR | Why Selected |
+|--------|-----|--------------|
+| ... | ... | ... |
+
+**Prioritized Keyword Targets:**
+| Keyword | Volume | KD | SERP Type | Status | Est. Monthly Revenue Upside | Vehicle | Notes |
+|---------|--------|-----|-----------|--------|-----------------------------|---------|-------|
+| ... | ... | ... | Clean / Mixed / Heavy | 🟢/🟡/🔴/⚪ | $X–$Y | Core domain / TPV / Editorial | ... |
+
+**Revenue Upside Summary:**
+[Total estimated monthly upside if top 3–5 green keywords are captured at P1. Note assumptions used.]
+
+**SERP Flags:**
+[Any keywords where the SERP composition makes direct ranking not worth pursuing — note the editorial alternative instead]
+
+**TPV Opportunities:**
+[Any keywords flagged as better suited for a TPV vehicle than the core domain]
+
+**Recommended Starting Point:**
+[1–2 sentences on where to focus first given the analysis — which keyword(s) to prioritize and why]
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+## Judgment Guidelines
+
+These encode how Mechanism evaluates keywords — not generic SEO best practices:
+
+- **Revenue upside > volume.** A 2k/month keyword that maps to $15k in monthly revenue upside beats a 20k keyword with messy intent and a cluttered SERP.
+- **Relevance and intent beat DR.** A DR 50 site ranking for your exact money keyword tells you more about winnability than a competitor's overall domain authority.
+- **Messy SERPs are not automatic disqualifiers** — they're a signal to shift strategy toward the editorial layer rather than direct ranking.
+- **New domains need foundational authority first.** If the brand domain is new (DR < 15), note which keywords are viable now vs. in 6–12 months as authority builds.
+- **Don't chase informational keywords for volume.** If the content wouldn't directly serve a buyer or someone very close to buying, it probably isn't worth creating.
+- **Flag the halo effect.** If a keyword is high-competition but important for brand presence (showing up where the customer makes decisions), note it even if direct ranking isn't the near-term play. SERPdom is about being in all the right places, not just ranking on the core domain.
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+## Example Trigger Phrases
 
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+- "What keywords should Hey Sunday target?"
+- "Run keyword research for Hello Pest"
+- "What's the organic opportunity for PrimePutt?"
+- "Which keywords should we prioritize for [brand]?"
+- "Find the money keywords in the putting mat category"
+- "Size the keyword opportunity for a new laundry brand"

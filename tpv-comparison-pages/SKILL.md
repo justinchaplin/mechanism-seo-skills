@@ -277,36 +277,22 @@ These pages work because readers trust them. Don't abuse that trust.
 
 ## Output
 
-Save the report as a Word document (.docx) using python-docx.
+For each page request, produce:
 
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
-
----
-
-**[Skill Name] — [Brand] — [Date]**
-
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+1. **Page brief**: H1, target keyword, secondary keywords, word count target, CTR2 strategy (which section drives to PortCo, what anchor text, what CTA)
+2. **Full page draft**: Complete content following the relevant template above
+3. **Schema JSON-LD**: ItemList (for roundups) and/or Product+AggregateRating (for individual picks)
+4. **Internal link map**: Which other TPV pages should link to this page, and which anchor text to use
+5. **Update cadence recommendation**: How frequently pricing/rankings need review (most comparison pages: quarterly minimum)
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+## Example Trigger Phrases
 
----
-
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
-
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+- "Build the best laundry pods page for The Laundry Guru"
+- "Create a Hey Sunday vs. Dropps comparison"
+- "We need a 'best alternatives to Tide Pods' page for the TPV"
+- "Build a best putting mats roundup for TourGrade"
+- "Write the laundry liquid format page"
+- "What's the structure for our detergent category pages?"
+- "Build a comparison table for the top laundry sheet brands"

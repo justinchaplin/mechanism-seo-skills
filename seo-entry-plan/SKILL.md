@@ -180,38 +180,91 @@ Flag if Phase 3 (earned media) is already partially achieved — e.g., if the br
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**SEO Entry Plan — [Brand Name]**
+*Target keyword(s): [keyword(s)]*
+*Prepared: [date]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**SERP Snapshot**
+| Position | Page | Type | DR | RDs | Notes |
+|---|---|---|---|---|---|
+| P1 | [url] | [type] | [DR] | [RDs] | |
+| P2 | ... | | | | |
+| ... | | | | | |
+| Current PortCo position | [url or "not ranking"] | | [DR] | [RDs] | |
+
+**SERPDom Audit**
+[Note any positions where the brand already appears through earned media or editorial coverage. This is existing SERPDom to build on.]
+
+**Gap Diagnosis**
+[1–2 sentences: is this an on-page gap, an authority gap, or both? What's the primary lever?]
+
+**Vehicle:** [Optimize existing page / Create new page / Earned media]
+
+**Target URL:** `[exact URL]`
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+**Page Brief**
+
+*Title Tag:* `[recommended title tag]`
+
+*Meta Description:* `[recommended meta description]`
+
+*H1:* `[recommended H1]`
+
+*Primary Keyword:* [keyword]
+*Supporting Keywords:* [keyword 1], [keyword 2], [keyword 3]
+
+*Content Direction:*
+[Bullet points covering: word count target, key sections to include, buyer intent signals, E-E-A-T requirements for this category]
+
+*Internal Linking:*
+[Which existing pages should link to this target page, and with what anchor text]
+
+*Schema:*
+[What schema types to implement and why]
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+**Link Building Requirement**
+[Either "not the primary lever — focus on on-page first" or: specific referring domain gap, recommended link types, and realistic timeline]
 
 ---
 
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
+**SERPDom Sequencing**
 
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+- **Phase 1 (0–90 days):** [specific actions]
+- **Phase 2 (90–180 days):** [specific actions]
+- **Phase 3 (180+ days):** [earned media / SERPDom completion]
+
+**Target state:** [Describe what full SERPDom looks like for this keyword once the plan is complete — e.g., "Product page at P2, brand featured in P1 editorial roundup."]
+
+---
+
+## Judgment Guidelines
+
+These encode how Mechanism evaluates SEO entry — not generic best practices:
+
+- **On-page before off-page.** If a competitor ranks above the PortCo despite weaker domain authority, fix the page before buying links. Links to an under-optimized page don't move rankings.
+- **Internal links are free and fast.** They're almost always underused on PortCo sites. Point to the target page from the homepage, blog, and related product pages. This alone can move rankings for low-competition terms.
+- **Title tag is the highest-leverage on-page change.** If the primary keyword isn't in the title tag, nothing else matters until it is. Write a specific recommendation — don't say "include the keyword in the title."
+- **DR gap < 15 is usually not the real problem.** Most PortCo on-page issues are simpler: wrong keyword in title, thin copy, no internal links. Diagnose on-page first.
+- **Earned media > built editorial.** Getting featured in an existing high-DR roundup is faster and more valuable than building new infrastructure. If P1 is held by a DR 70+ editorial site, the play is PR — pitch for inclusion, don't try to outrank them.
+- **Be honest about timelines.** A DR 1 domain targeting a KD 20+ keyword is a 12–18 month project minimum. Don't obscure this. State it clearly so the team can make a resource decision.
+- **SERPDom is the goal, not just a ranking.** The plan should always point toward the brand appearing in multiple positions — product page + editorial feature. Build toward this even if Phase 3 is 12 months away.
+
+---
+
+## Example Trigger Phrases
+
+- "How do we rank for mosquito repellent traps for HelloPest?"
+- "What's the SEO action plan for PrimePutt on 'best putting mat'?"
+- "We want to get on page 1 for [keyword] — what do we do?"
+- "Build me an entry plan for HeySunday targeting laundry sheets"
+- "What does it take to rank for [keyword]?"
+- "Where do we start with SEO for [new PortCo]?"
+- "We're at P8 for [keyword] — how do we get to P1?"

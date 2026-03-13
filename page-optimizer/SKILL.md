@@ -201,38 +201,120 @@ Present as a flat list of 8–15 terms the page should naturally include in copy
 
 ---
 
-## Output
+## Output Format
 
-Save the report as a Word document (.docx) using python-docx.
+```
+PAGE OPTIMIZER — [TARGET URL]
+Target keyword: [keyword] | Current position: [P# or not ranking]
+Page type: [PDP / Category / Editorial / Landing / Comparison]
+Primary competitor: [URL] at [P#]
 
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SIGNAL COMPARISON: [PortCo] vs. [Competitor]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Structure the document in this exact order:
+| Signal | PortCo | Competitor | Gap? |
+|--------|--------|------------|------|
+| Title tag | [current] | [competitor] | ✅/⚠️/❌ |
+| H1 | [current] | [competitor] | ✅/⚠️/❌ |
+| Keyword in first 100 words | [yes/no] | [yes/no] | ✅/❌ |
+| H2 coverage of key subtopics | [X of Y] | [full] | ⚠️/❌ |
+| Content depth | [~X words] | [~X words] | ✅/⚠️/❌ |
+| Product schema | [yes/no] | [yes/no] | ✅/❌ |
+| Review schema | [yes/no] | [yes/no] | ✅/❌ |
+| Internal links (inbound) | [X] | [X] | ⚠️/❌ |
+| Image alt text | [descriptive/generic] | [descriptive] | ✅/❌ |
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GAP SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Primary gap type: [On-page / Authority / Both]
+[2–3 sentence narrative of what the competitor is doing better and why it matters]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SEMANTIC KEYWORD CLUSTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Terms the page should naturally include:
+[indoor putting mat, golf practice mat, putting green for indoors, true roll surface,
+speed control putting, distance control drills, golf training aid, premium putting mat,
+home golf practice, putting stroke improvement, ...]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTIMIZATION PLAN — PRIORITIZED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PRIORITY 1 — Quick wins (highest leverage, low effort)
+
+1. Title tag rewrite
+   Current: "[current title tag]"
+   Recommended: "[rewritten title tag]"
+   Why: [specific reason — keyword position, CTR, competitor comparison]
+
+2. H1 rewrite
+   Current: "[current H1]"
+   Recommended: "[rewritten H1]"
+   Why: [specific reason]
+
+3. [Next quick win — e.g., add keyword to first paragraph, fix alt text]
+
+PRIORITY 2 — Content improvements (medium effort, high impact)
+
+4. Add missing H2 sections
+   Missing sections vs. competitor: [list specific H2s competitor has that PortCo lacks]
+   Recommended additions: [specific H2 copy suggestions]
+
+5. Expand product description
+   Current depth: ~[X] words
+   Competitor depth: ~[X] words
+   What to add: [specific topics, angles, or proof points that competitor covers]
+
+6. Incorporate semantic keyword cluster
+   Terms currently absent: [list from cluster above]
+   Where to add them: [specific placement — product description, H2, specs section]
+
+PRIORITY 3 — Structural / Technical (higher effort, foundational)
+
+7. Add/fix schema markup
+   [Specific schema type + what fields are missing or incorrect]
+
+8. Internal linking
+   [Specific pages that should link to this page with what anchor text]
+   [Specific pages this page should link to]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AUTHORITY CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PortCo DR: [X] | Competitor DR: [X]
+PortCo RDs to this page: [X] | Competitor RDs: [X]
+
+[One of:]
+→ On-page gap is the primary issue — fixing the above should move the needle without new links
+→ Authority gap exists — on-page fixes are necessary but not sufficient; link building to this page required
+→ Both — on-page fixes first, then link building to close the gap
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NEXT STEP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+→ [Implement P1 quick wins — these can go live today]
+→ [If authority gap: flag for Link Building Strategy skill]
+```
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+## Key Judgment Calls
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**On-page vs. authority gap:** If the PortCo has comparable DR to the competitor but ranks 3+ positions below them, the problem is almost certainly on-page. Don't recommend link building as the first fix — diagnose the content and structural issues first.
 
----
+**PDP vs. editorial intent mismatch:** If the SERP is dominated by editorial/review content and the PortCo only has a PDP, flag this as a vehicle mismatch — not an on-page optimization problem. On-page fixes to a PDP won't move it past editorial content if Google has decided the intent for that keyword is commercial-review, not transactional.
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+**Title tag is the highest-leverage single change.** If the target keyword isn't in the title tag or is buried at the end, that's almost always Priority 1 regardless of everything else.
 
----
+**Semantic depth over keyword density.** The goal is not to stuff the target keyword — it's to ensure the page covers the full topic that Google associates with that keyword. If a competitor's page covers 8 subtopics and the PortCo's covers 3, that's the gap, not keyword frequency.
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+**Schema on PDPs is non-negotiable.** A product page without Product schema and Review aggregate schema is leaving structured data visibility on the table. Flag this every time it's missing, regardless of priority.
 
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+**Don't optimize in a vacuum.** Every recommendation should reference what the competitor is doing — not what a generic SEO checklist says. The optimization plan is a competitive response, not a best-practices audit.

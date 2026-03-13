@@ -137,38 +137,55 @@ For each Tier 1 and Tier 2 target, derive the specific pitch angle using the Por
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**Outreach Direction — [Brand Name]**
+*Analyzed: [date]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**SERP Landscape Summary:**
+[2–3 sentences on who controls the editorial layer for the PortCo's money keywords — who are the highest-value SERPdom targets and why]
+
+**Prioritized Target List:**
+
+| Site | DR | SERPdom Value | Halo Effect | Link Authority | Tier | Pitch Angle |
+|------|----|--------------|-------------|----------------|------|-------------|
+| breaking80.com | [DR] | H — P1 "best putting mat" | H — serious golfers | H | 🔴 Tier 1 | Existing roundup inclusion — lead with product quality claim, offer to send a mat |
+| ... | | | | | | |
+
+**Tier 1 Deep Dives:**
+For each Tier 1 target, a short paragraph:
+- What content they have that's relevant
+- Exactly what the pitch should lead with
+- What the ask is
+- What to offer
+
+**What NOT to Pitch:**
+[Specific site types or target categories that would be a waste of outreach time for this specific PortCo — with rationale]
+
+**First Outreach Recommendation:**
+[One specific target to start with, the exact angle, and why it's the highest-leverage first move]
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+## Judgment Guidelines
+
+- **SERPdom value multiplies link value.** A link from a site that ranks P1 for your money keyword is worth dramatically more than the same DR site that doesn't rank for anything relevant. Always check SERP position before scoring.
+- **The pitch angle comes from the product, not the template.** Generic outreach fails because it doesn't give the site owner a reason to care. The "what's distinctive" field in the PortCo knowledge file is the source of every good pitch.
+- **Physical products have a natural pitch lever — send them.** For ecommerce PortCos, product seeding is the highest-conversion outreach tactic. Getting the product in a writer's hands removes the friction of convincing them without evidence.
+- **Don't lead with the link ask.** The ask is implicit in the outreach type. Lead with the value — why their readers benefit from knowing about this product.
+- **Roundup articles are the highest-leverage targets in ecommerce.** A "best [category]" article ranking P1 checks all three boxes: link authority, SERPdom presence, and audience relevance. These are always Tier 1 for physical product PortCos.
+- **Flag the halo effect dimension explicitly in the output.** The team needs to understand they're not just building links — they're building brand presence in the places their customers make decisions.
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+## Example Trigger Phrases
 
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+- "How do we get PrimePutt into the Breaking80 roundup?"
+- "What's our outreach strategy for Hey Sunday?"
+- "Who should we be reaching out to for Hello Pest?"
+- "How do we pitch [site] for a link?"
+- "What's the angle for getting into golf authority sites?"
+- "Identify the highest-value outreach targets for [brand]"
+- "How do we approach outreach for a new brand entering the [category] market?"

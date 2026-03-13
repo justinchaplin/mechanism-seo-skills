@@ -230,38 +230,114 @@ Fix: Identify which sources cite competitors → run link gap → prioritize out
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**AEO / GEO Audit — [Brand Name]**
+*Audited: [date]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
-
----
-
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+**AI Search Presence Summary:**
+[2–3 sentences. Is the brand showing up? Where? What's the headline finding?]
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+**Pre-Check: Technical Accessibility**
+
+| Check | Status | Action Needed? |
+|-------|--------|---------------|
+| GPTBot | Allowed / Blocked | Yes / No |
+| OAI-SearchBot | Allowed / Blocked | Yes / No |
+| PerplexityBot | Allowed / Blocked | Yes / No |
+| llms.txt | Present / Missing | Yes / No |
+| Server-side rendering | Confirmed / At risk | Yes / No |
 
 ---
 
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
+**Manual Spot-Check Results**
 
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+| Query | Surface | Brand Mentioned? | What's Said | Competitors Instead | Sources Cited |
+|-------|---------|-----------------|------------|-------------------|---------------|
+| "best [category]" | Google AIO | Yes / No | [summary] | [brands] | [domains] |
+| "best [category]" | Perplexity | Yes / No | [summary] | [brands] | [domains] |
+| "best [category]" | ChatGPT | Yes / No | [summary] | [brands] | [domains] |
+| "[brand] reviews" | Perplexity | Yes / No | [summary] | — | [domains] |
+
+**GSC Signal:** [Impressions-up/clicks-flat keywords, if any]
+
+---
+
+**Brand Radar — Share of Voice**
+
+| Brand | ChatGPT Mentions | ChatGPT SOV | Perplexity Mentions | Perplexity SOV |
+|-------|-----------------|-------------|---------------------|----------------|
+| [PortCo] | [X] | [X%] | [X] | [X%] |
+| [Competitor 1] | [X] | [X%] | [X] | [X%] |
+| [Competitor 2] | [X] | [X%] | [X] | [X%] |
+
+---
+
+**Top Cited Domains**
+
+| Domain | Citation Count | Also Links to Brand? | Outreach Priority |
+|--------|---------------|---------------------|------------------|
+| [domain] | [X] | Yes / No | High if No |
+
+---
+
+**Citability Issues — Key Pages**
+[Pages with low citability scores and specific fixes]
+
+---
+
+**Diagnosis**
+[Which scenario(s) apply with evidence]
+
+---
+
+**Recommended Actions**
+
+*Quick Wins:*
+1. Allow GPTBot / PerplexityBot in robots.txt (if blocked)
+2. Add llms.txt to domain root
+3. Rewrite key page openings with direct answer in first 40–60 words
+4. Add question-based H2/H3 headings to money pages
+5. Add publication and last-updated dates to key pages
+
+*Medium Effort:*
+1. Outreach to top cited domains not linking to brand (use Outreach Direction skill)
+2. Add author bylines with credentials to key pages
+3. Build FAQ sections on money pages with explicit Q&A format
+4. Verify server-side rendering for key content
+
+*Higher Effort / Longer Horizon:*
+1. Build authentic Reddit presence in category discussions
+2. Build Wikipedia entity presence for the brand
+3. Create original research or data — unique citability signal
+4. YouTube content if brand has strong product demonstration angle
+
+---
+
+## Judgment Guidelines
+
+- **The primary lever is editorial coverage — not technical fixes.** robots.txt and llms.txt are hygiene items. Getting cited requires being in the sources AI trusts. That's outreach work.
+- **Don't overreact to low AI share of voice for new brands.** AI training data lags. A brand 6 months old with limited editorial coverage will have low presence by default.
+- **Platform behaviors differ.** Google AI Overviews = traditional SEO path. Perplexity and ChatGPT = Reddit and Wikipedia matter disproportionately. Don't treat all AI surfaces identically.
+- **AI Overviews absorbing clicks is structural.** Report it honestly. Adaptation, not reversal, is the only path.
+- **The cited domains list is the most actionable output.** Every domain AI is already citing in the category is a warm outreach target with proven category relevance.
+- **For most Mechanism PortCos, Perplexity and Google AI Overviews are higher priority than ChatGPT** for commercial product queries. Weight outreach and optimization accordingly.
+- **Brand Radar data is sampled.** Use it for directional signal and competitive benchmarking, not as a definitive mention count.
+
+---
+
+## Example Trigger Phrases
+
+- "What does ChatGPT say about Hey Sunday?"
+- "Are we showing up in AI search for laundry detergent sheets?"
+- "Run an AEO/GEO audit for PrimePutt"
+- "Why are our impressions up but clicks down for [keyword]?"
+- "How do we get Hey Sunday into AI Overviews?"
+- "Optimize our content for AI search"
+- "Check if AI crawlers can access [domain]"
+- "Do we show up in Perplexity for [category] searches?"
+- "What are competitors doing in AI search that we're not?"

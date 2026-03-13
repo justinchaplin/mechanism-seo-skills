@@ -101,38 +101,64 @@ Follow the same structure but expand each section with more context. Include the
 
 ---
 
-## Output
+## Output Format
 
-Save the report as a Word document (.docx) using python-docx.
+Produce the report in the format specified in the PortCo knowledge file (Slack, email, or doc). Default to Slack format unless specified otherwise.
 
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
+The report must include:
 
-Structure the document in this exact order:
+**Subject/Header:** [Brand] Organic Update — [Month Year]
 
----
+**Opening headline:** One sentence that answers "is organic moving the needle?" — written for a business owner, not an SEO
 
-**[Skill Name] — [Brand] — [Date]**
+**Performance summary:** 3–5 key metrics with context (not just numbers — what they mean)
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**What we did:** The most important work completed this month — link placements, content published, campaigns run. Focus on the work that will compound, not task lists.
 
----
+**What moved:** Rankings, traffic, conversions — what changed and why
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+**Challenges:** Anything not moving as expected, with honest framing (not buried)
 
----
+**Halo effect note:** Standard acknowledgment that organic attribution understates total impact — customize based on whether branded search or paid conversion rate data is available to support it
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+**What's next:** Three specific focus areas for next month
 
 ---
 
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
+## Tone Guidelines
 
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+**For paid-media-focused CEOs:**
+Lead with revenue and conversion language. Connect every organic metric to dollars where possible. Minimize SEO jargon. The halo effect framing is especially important here — connect organic visibility to paid media performance explicitly.
+
+**For SEO-literate audiences:**
+Can go deeper on ranking data and link building strategy. Still lead with business impact but can include more tactical detail.
+
+**For skeptical stakeholders:**
+Be especially direct about what moved and what didn't. Don't bury challenges. Over-communicate on the halo effect — this audience needs to understand why organic attribution understates impact.
+
+**Always avoid:**
+- Vanity metrics without context ("we got 47 new backlinks!" — so what?)
+- Jargon without explanation (DR, CTR, impressions — explain or reframe)
+- Activity without outcome ("we sent 200 outreach emails" — what did it result in?)
+- Overpromising on timelines
+
+---
+
+## Judgment Guidelines
+
+- **If it was a bad month, say so clearly and explain why.** Algorithm update, thin content, slow link velocity — be specific. Then explain what's being done about it.
+- **Branded search growth is an underused proof point.** If branded GSC clicks are up without a paid brand campaign, that's organic-driven brand awareness. Name it explicitly — it connects organic to business outcomes even when conversion attribution is thin.
+- **Link placements are worth calling out specifically if they're high-value.** "We secured a mention in a Breaking80 article that ranks P1 for 'best putting mat'" is more meaningful than "we added 3 referring domains."
+- **Don't report on what you were supposed to do — report on what you did.** Activity logs belong in internal docs, not client updates.
+- **Match the length to the relationship stage.** Early engagements need more context and education. Mature engagements can be more concise — the PortCo already understands the model.
+
+---
+
+## Example Trigger Phrases
+
+- "Write the monthly report for Hey Sunday"
+- "Draft the March update for PrimePutt"
+- "What do we send to Learner this month?"
+- "Summarize what we did for Hello Pest in February"
+- "Write up the organic update for [brand]"
+- "It's end of month — put together the [brand] report"

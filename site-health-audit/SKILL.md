@@ -238,38 +238,70 @@ After pulling Ahrefs issues and reviewing GSC, synthesize:
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**Site Health Audit — [Brand Name] ([domain])**
+*Audit date: [date] | Last crawl: [Ahrefs crawl date]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
-
----
-
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+**Health Score: [X]/100** [🔴 / 🟡 / 🟢 based on score]
+*[X] total pages crawled | [X] errors | [X] warnings | [X] notices*
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+**🔴 Alarms — Act Immediately**
+[List each alarm with: issue name, pages affected, what it means, and what to do]
+
+If none: ✅ No active alarms.
 
 ---
 
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
+**🟡 Warnings — Address Within 2 Weeks**
+[List warnings with pages affected and recommended action]
 
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+If none: ✅ No active warnings.
+
+---
+
+**GSC Signals**
+[Coverage summary — any errors, notable exclusions]
+[Performance summary — clicks/impressions trend, notable drops]
+[Manual actions — clean or flagged]
+[Core Web Vitals — pass/fail summary]
+
+---
+
+**Recommended Actions**
+1. [Specific action — owner, deadline]
+2. [Specific action]
+3. [Monitor item, if relevant]
+
+---
+
+**What's Not a Problem**
+[Explicit callout of any issues in the audit that look alarming but are expected/intentional — e.g., noindex on thank-you pages, canonicals on filtered URLs. This prevents the team from wasting time investigating noise.]
+
+---
+
+## Judgment Guidelines
+
+- **Distinguish between important pages and everything else.** A 404 on an old blog post is different from a 404 on a money page with backlinks. Always check whether affected pages are important before escalating.
+- **New issues that appeared in the last crawl (high `change` value) are higher priority than persistent issues.** Something that just broke is more urgent than something that's been stable for months.
+- **Don't flag notices as warnings.** Notice-level issues are real but low-priority. Treating them as urgent burns credibility with PortCo teams.
+- **If the crawl status is not "Completed," the data is unreliable.** Flag this before interpreting any issue counts.
+- **Ahrefs crawls differently than Googlebot.** Ahrefs may flag issues that Googlebot doesn't see (and vice versa). GSC is always the ground truth for what Google actually sees.
+- **A healthy Ahrefs score with a GSC manual action is still an alarm.** The audit score doesn't account for penalties.
+- **After a site migration or redesign, always check redirect chains and coverage together.** These are the two most common post-migration failure modes.
+
+---
+
+## Example Trigger Phrases
+
+- "Run a site health audit for Hey Sunday"
+- "Check if there are any technical issues on primeputt.com"
+- "Something is wrong with Learner's rankings — nothing changed in content"
+- "Check the site audit for Hello Pest after the migration"
+- "Are there any GSC errors for [brand]?"
+- "What does the Ahrefs site audit show for [domain]?"
+- "Weekly site health check for [brand]"

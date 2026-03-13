@@ -211,38 +211,57 @@ Tactics that make sense at a future stage or in specific circumstances.
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**Link Building Strategy — [Brand Name]**
+*Analyzed: [date]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**Current Profile:**
+| Metric | PortCo | Top Competitor | Gap |
+|--------|--------|----------------|-----|
+| DR | ... | ... | ... |
+| Referring Domains | ... | ... | ... |
+| Primary Link Types | ... | ... | ... |
+
+**Category SERP Pattern:**
+[2–3 sentences on what types of sites dominate the category SERPs and what that means for link building approach]
+
+**Recommended Tactic Stack:**
+
+Tier 1 — Start here:
+- [Tactic]: [Why this tactic, what to target, expected timeline]
+
+Tier 2 — Build in parallel:
+- [Tactic]: [Why this tactic, what to target, expected timeline]
+
+Tier 3 — Later / situational:
+- [Tactic]: [Why, when to activate]
+
+**What NOT to do for this PortCo:**
+[Specific tactics or link types that would be a waste of time or actively harmful for this specific brand — not just generic advice]
+
+**Recommended First Outreach Target Type:**
+[One sentence on exactly where to start — e.g., "Find the top 10 'best putting mat' roundup articles and pitch PrimePutt for inclusion"]
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+## Judgment Guidelines
+
+- **New domain (DR < 20):** Foundation first. Scholarship links, citations, early editorial mentions. Don't try to close a 50-point DR gap with competitive gap targeting — it won't work yet.
+- **Growth stage (DR 20–40):** Shift to category-relevant editorial outreach. Roundups, broken link building, resource pages. Volume matters here but quality can't drop.
+- **Mature/Stable (DR 40+):** Quality over volume. One Golf Digest placement is worth more than 50 directory links. Focus on the highest-authority editorial targets in the category.
+- **Always flag the halo effect potential** of each tactic — some links drive rankings, some drive brand trust, some do both. The team should understand which they're chasing.
+- **Ecommerce brands almost always benefit from roundup outreach first.** Editorial sites in ecommerce categories already link to products — it's the natural motion.
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+## Example Trigger Phrases
 
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+- "What's our link building strategy for PrimePutt?"
+- "Should we do scholarship links for Hello Pest?"
+- "How do we build links for Hey Sunday?"
+- "Kick off link building strategy for [brand]"
+- "What link building tactics make sense for a DR 15 ecommerce site?"
+- "We need more links for Learner — where do we start?"

@@ -151,38 +151,101 @@ Identify the dominant patterns across P1–10:
 
 ---
 
-## Output
+## Output Format
 
-Save the report as a Word document (.docx) using python-docx.
+```
+SERP ANALYSIS — [KEYWORD]
+Country: [US/other] | Pulled: [date]
 
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SEARCH INTENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Structure the document in this exact order:
+Primary intent: [Informational / Commercial / Transactional / Navigational]
+Confidence: [~X% of P1–10 results support this]
+Mixed intent: [Yes/No — if yes, describe what’s mixed]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SERP FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AI Overview: [Present/Absent]
+  → [If present: what it says, what sources it cites, format]
+  → [CTR impact estimate: High / Medium / Low]
+
+Shopping Snippets: [Present/Absent]
+  → [If present: products listed, price range]
+
+People Also Ask:
+  → [List PAA questions]
+
+Featured Snippet: [Present/Absent — who owns it, what format]
+
+Other features: [Image pack, video carousel, local pack, etc.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE ONE BREAKDOWN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+| Pos | Domain | DR | RDs | Page Type | Content Type |
+|-----|--------|----|-----|-----------|--------------|
+| 1   | ...    | .. | ..  | Editorial | Best-of list |
+| 2   | ...    | .. | ..  | Product   | PDP          |
+...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT'S WINNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Dominant format: [e.g., "Editorial best-of lists dominate P1–5"]
+Authority bar (P1–3): DR [X–Y], RDs [X–Y]
+Brand vs. editorial split: [X brand pages / Y editorial pages in top 10]
+Commercial intent signal: [High / Medium / Low — rationale]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONTENT GAPS & BENCHMARKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Content gaps: [Topics, angles, or formats missing from P1–10]
+Word count benchmark: P1–3 avg ~[X] words → target [X+20%] words for a new entrant
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPPORTUNITY & BARRIERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Opportunity: [What gap exists, who can fill it, with what vehicle]
+Barriers: [DR bar, format requirements, AIO displacement, brand lock]
+
+[If PortCo domain provided:]
+PortCo current position: [P# or Not ranking]
+Gap to P1–3: [On-page / Authority / Format / All three]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RECOMMENDED VEHICLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[One of:]
+→ Core domain product/category page — [rationale]
+→ Earned media / editorial placement — [rationale, target DR range for placement]
+→ Both (SERPDom play) — [sequencing: what to build first, what to pursue second]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NEXT STEP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+→ Run SEO Entry Plan skill to build the execution brief for this keyword
+```
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+## Key Judgment Calls
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**When AIO is present:** Don't automatically deprioritize the keyword. Assess whether the AIO is a thin answer (users will still click through) or a comprehensive answer (CTR likely killed). Shopping queries and comparison queries often still drive clicks even with an AIO present.
 
----
+**When the SERP is all editorial:** The vehicle is earned media, not a product page. Flag this clearly — a brand spending time optimizing their PDP for this keyword is wasting effort if every P1–5 result is a third-party best-of list.
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+**When forums dominate:** Reddit or Quora in the top 3 is not a weakness — Google actively surfaces these because users trust unbiased peer opinions and click through at high rates. Don't treat forum rankings as displaceable. Instead, assess whether the PortCo can participate in those conversations (Reddit presence, community engagement) and whether the remaining positions are winnable with a strong editorial or brand page.
 
----
+**When the PortCo is already ranking but underperforming:** Compare their DR/RDs to whoever is outranking them. If their authority is comparable or higher, the problem is on-page — title tag, content quality, internal linking. Flag this and push toward SEO Entry Plan.
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
-
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+**SERPDom framing:** If both a product page and editorial coverage are theoretically achievable for this keyword, flag the SERPDom opportunity. The goal is always to own multiple positions on the same SERP.

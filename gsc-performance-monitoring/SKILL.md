@@ -117,38 +117,61 @@ If a drop is significant, cross-reference with:
 
 ---
 
-## Output
-
-Save the report as a Word document (.docx) using python-docx.
-
-**Filename:** `[portco]-[skillname]-[M.DD.YY].docx`
-**Example:** `liveitup-aeogeoaudit-3.13.26.docx`
-**Save location:** `~/Documents/mechanism-seo/outputs/`
-
-Structure the document in this exact order:
+## Output Format
 
 ---
 
-**[Skill Name] — [Brand] — [Date]**
+**GSC Performance Review — [Brand Name]**
+*Period: [date range] vs. [prior period]*
 
-**TL;DR**
-2–3 sentences. The headline finding and the single most important action.
+**Overview:**
+| Metric | This Period | Prior Period | Change |
+|--------|------------|--------------|--------|
+| Total Clicks (non-branded) | ... | ... | ↑/↓ % |
+| Total Impressions (non-branded) | ... | ... | ↑/↓ % |
+| Average CTR | ... | ... | ↑/↓ |
+| Average Position | ... | ... | ↑/↓ |
+| Branded Clicks | ... | ... | ↑/↓ % |
+
+**Money Keyword Rankings:**
+| Keyword | Position | Change | Impressions | Clicks | CTR | Flag |
+|---------|----------|--------|-------------|--------|-----|------|
+| ... | ... | ... | ... | ... | ... | 🟢/🟡/🔴 |
+
+**Top Opportunities (Positions 11–20):**
+| Keyword | Position | Impressions | Recommended Action |
+|---------|----------|-------------|-------------------|
+| ... | ... | ... | ... |
+
+**Pages to Watch:**
+| Page | Issue | Recommended Action |
+|------|-------|-------------------|
+| ... | CTR low / impressions dropping / position drop | ... |
+
+**Drops / Anomalies:**
+[Any significant drops, unexplained changes, or items requiring investigation]
+
+**Actions for This Week:**
+[3 bullets max — the specific things the team should do based on this review]
 
 ---
 
-**Summary**
-Narrative overview written for a CEO. What was audited, what was found, overall health or status. No bullet points, no data tables. Plain language. 3–5 paragraphs.
+## Judgment Guidelines
+
+- **Non-branded clicks are the primary growth metric.** Branded clicks are a lagging indicator of halo effect — good to track but not the growth lever.
+- **Position 11–20 is the highest-leverage zone.** These keywords already have visibility — a nudge gets them to page one. Flag these every single review.
+- **CTR drops without position drops usually mean the SERP changed** — AI overviews, new rich results, or competitor snippets stealing clicks. Investigate the SERP manually.
+- **Don't panic on weekly volatility.** Single-week position swings of 1–3 positions are normal. Flag sustained multi-week trends, not one-week noise.
+- **Branded search growth is the halo effect signal.** If branded impressions and clicks are growing without paid brand campaigns, organic and link building work is driving awareness. Communicate this to PortCo leadership — it won't show in organic conversion attribution.
+- **Impressions spike before clicks do.** When new content starts getting indexed and ranking, impressions come first. An impressions increase without a clicks increase is an early positive signal — the page is getting served but CTR needs work.
 
 ---
 
-**Findings**
-Full analysis — all data, tables, competitive breakdowns, page-level detail, and supporting evidence. Nothing stripped out. This is the working reference for whoever is executing the work.
+## Example Trigger Phrases
 
----
-
-**Action Items**
-Numbered list. Each item states the action and why it matters or what impact it drives.
-
-1. [Action] — [why it matters / expected impact]
-2. [Action] — [why it matters / expected impact]
-3. [Action] — [why it matters / expected impact]
+- "Check GSC for Hey Sunday"
+- "How are PrimePutt's rankings looking this week?"
+- "Run a GSC review for Learner"
+- "What's moving in search for Hello Pest?"
+- "Weekly organic check for [brand]"
+- "What does Search Console show for [brand]?"
