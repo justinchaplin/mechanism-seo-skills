@@ -19,7 +19,7 @@ Skills are organized into four pillars:
 
 Plus two **TPV skills** for Mechanism's third-party validator domain strategy.
 
-Browse the full list: [mechanism-seo-skills/](./mechanism-seo-skills/)
+Browse the full list by clicking into the `mechanism-seo-skills/` folder above.
 
 ---
 
@@ -39,16 +39,18 @@ If you want to actually use these skills in your day-to-day work, set up Claude 
 
 | Requirement | Details |
 |-------------|---------|
-| Claude Pro account | $20/month at [claude.ai](https://claude.ai) |
+| Claude Max account | Recommended — you will hit rate limits on Pro quickly. Claude Max is $100/month at [claude.ai](https://claude.ai). Claude Pro ($20/month) works but is the minimum. |
 | Node.js (version 18+) | Free at [nodejs.org](https://nodejs.org) |
 | Claude Code (CLI) | Free — installed via terminal |
 | Git | Free — usually pre-installed on Mac |
 
 #### Setup (One-Time)
 
-**Step 1 — Create a Claude Pro account**
+**Step 1 — Create a Claude account**
 
-Go to [claude.ai](https://claude.ai), sign up with your work email, and upgrade to Pro. If Mechanism is covering the cost, confirm with your manager first.
+> **Already have a Claude account? Skip to Step 2.**
+
+Go to [claude.ai](https://claude.ai), sign up with your work email, and upgrade to Max (recommended) or Pro. If Mechanism is covering the cost, confirm with your manager first.
 
 **Step 2 — Install Node.js**
 
@@ -86,7 +88,7 @@ sudo npm install -g @anthropic-ai/claude-code
 claude
 ```
 
-The first time you run this, a browser window opens asking you to log in. Sign in with your Claude Pro account. Once authorized, you're connected. You can close the browser window and return to Terminal.
+The first time you run this, a browser window opens asking you to log in. Sign in with your Claude account. Once authorized, you're connected. You can close the browser window and return to Terminal.
 
 **Step 5 — Download the skills**
 
@@ -118,35 +120,37 @@ claude --dangerously-skip-permissions
 
 > **Why `--dangerously-skip-permissions`?** This flag tells Claude Code to run without stopping to ask for confirmation at every step. Without it, Claude will pause and ask you to approve each tool use (web search, file save, etc.), which breaks the automation. The flag is safe to use for these SEO workflows.
 
-Then reference the skill file and describe your task:
+Then reference the skill file and describe your task in plain language:
 
 ```
 @~/.claude/skills/mechanism-seo-skills/mechanism-seo-skills/page-optimizer/SKILL.md
 
-Audit https://letsliveitup.com/products/supergreens for the keyword "greens powder"
+Run the page optimizer for Live It Up — audit the supergreens product page
 ```
 
 ```
 @~/.claude/skills/mechanism-seo-skills/mechanism-seo-skills/competitive-monitoring/SKILL.md
 
-Run competitive monitoring for Live It Up — letsliveitup.com — greens powder and electrolyte category
+Run competitive monitoring for Live It Up
 ```
 
 ```
 @~/.claude/skills/mechanism-seo-skills/mechanism-seo-skills/monthly-reporting/SKILL.md
 
-Generate monthly SEO report for HeySunday — heysunday.com — March 2026
+Run monthly SEO reporting for HeySunday — March 2026
 ```
 
-Claude will load the skill and run the full workflow. Output saves as a Word document to `~/Documents/mechanism-seo/outputs/`.
+You don't need to give Claude a long brief — just name the brand and what you want. Claude reads the skill file and knows what to do.
+
+Output saves as a Word document to `~/Documents/mechanism-seo/outputs/`.
 
 ---
 
 #### PortCo Knowledge Files
 
-Skills work best when Claude knows who it's working for. Each PortCo has a knowledge file — a document with the brand's products, SEO metrics, competitors, and key context. Ask Justin (or whoever manages the library) for the knowledge file for your PortCo.
+**Knowledge files are required, not optional.** Skills work best — and in many cases only correctly — when Claude knows who it's working for. Each PortCo has a knowledge file with the brand's products, SEO metrics, competitors, and key context that Claude needs to run skills accurately.
 
-Once you have it, save it here:
+Ask whoever manages this library for the knowledge file for your PortCo. Once you have it, save it here:
 
 ```bash
 mkdir -p ~/.claude/skills/contexts
@@ -169,14 +173,14 @@ cd ~/.claude/skills && git pull
 
 ### Path 2 — Claude.ai One-Off (Limited)
 
-If you just need to run a single skill quickly and don't want to set up Claude Code, you can upload a skill file directly into a Claude conversation. This works for text-heavy skills like monthly reporting or content strategy — but **it won't work well for skills that need live data**.
+If you just need to run a single skill quickly and don't want to set up Claude Code, you can upload a skill file directly into a Claude conversation. **This is a fallback, not the recommended path.** To really unlock this library and use it day-to-day, you need Claude Code.
 
-Skills that require Ahrefs, web crawling, or file saving will produce incomplete outputs via this path. It's a starting point, not a replacement for Claude Code.
+The one-off path works for text-heavy skills like monthly reporting or content strategy — but it won't work for skills that need live data. Skills that require Ahrefs, web crawling, or file saving will produce incomplete outputs via this path.
 
 **How it works:**
 
 1. Go to [github.com/justinchaplin/mechanism-seo-skills](https://github.com/justinchaplin/mechanism-seo-skills) and navigate to the skill you want
-2. Open `SKILL.md` and click the download icon (or copy the raw content)
+2. Open `SKILL.md`, click the download icon (or copy the raw content)
 3. Go to [claude.ai](https://claude.ai) and start a new conversation
 4. Upload or paste the SKILL.md content as a reference file
 5. Describe what you want: *"Follow this skill to run a content strategy for HeySunday — laundry sheets brand targeting eco-conscious households"*
