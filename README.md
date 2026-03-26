@@ -21,6 +21,8 @@ Plus two **TPV skills** for Mechanism's third-party validator domain strategy.
 
 Browse the full list by clicking into the `mechanism-seo-skills/` folder above.
 
+> **New to a PortCo? Start with the `portco-knowledge-setup` skill before running anything else.** Every other skill depends on knowing who the brand is, what it sells, and where it stands. Running skills without a knowledge file will produce generic output. The knowledge setup skill walks you through building the full context file in one session.
+
 ---
 
 ## How to Use These Skills
